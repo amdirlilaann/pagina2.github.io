@@ -221,6 +221,11 @@ p {
     color: #e91e63;
 }
 
+.map-wrapper { 
+    height: 500px; 
+    width: 100%; 
+    filter: none; 
+}
 /* DISEÑO RESPONSIVO (MÓVILES Y TABLETS) */
 @media (max-width: 768px) {
     .title {
