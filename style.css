@@ -1,0 +1,242 @@
+/* RESET DE ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    background-color: #171717;
+    color: #ffffff;
+}
+
+/* MENÚ NAVEGACIÓN (HEADER) */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background-color: #171717;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 10px;
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+.logo a, .navbar a {
+    display: block;
+    padding: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    background-color: #e91e63; /* Color rosado característico */
+}
+
+/* CONFIGURACIÓN BASE DE LAS SECCIONES */
+.content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* TÍTULOS Y PÁRRAFOS GENERALES */
+.title {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 0 150px; /* Margen para centrar bloques de texto */
+}
+
+/* BOTONES */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #e91e63;
+    background-color: #e91e63;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: transparent;
+}
+
+/* SECCIÓN INICIO (IMAGEN DE FONDO) */
+.general {
+    background: url('img/header.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+/* SECCIÓN SOFT / PRODUCTOS */
+.soft {
+    padding: 50px 0;
+    background-color: #303030;
+}
+
+/* CONTENEDOR DE TARJETAS (GRID FLEXBOX) */
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    height: 270px;
+    width: 270px;
+    background-color: #171717;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ICONOS DENTRO DE LAS TARJETAS */
+.icon-box, .soft .fab {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: #e91e63;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.box h3 {
+    font-size: 20px;
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 16px;
+    padding: 0 15px;
+    margin-bottom: 0;
+}
+
+/* SECCIÓN PRECIOS (Efecto Parallax Fijo) */
+.price {
+    background: url('img/costos.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+}
+
+/* SECCIÓN ABOUT / RESEÑAS DE USUARIOS */
+.about {
+    padding: 50px 0;
+    background-color: #262626;
+}
+
+.box-container-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.box-container-2 .box {
+    width: 250px;
+    position: relative;
+}
+
+/* IMAGEN DE USUARIO DESPLAZADA HACIA ARRIBA */
+.img-user {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -50px; /* Efecto sobresaliente */
+    border: 6px solid #e91e63;
+    background-color: #171717;
+}
+
+.box-container-2 h3 {
+    margin-top: 10px;
+}
+
+.star i {
+    font-size: 15px;
+    color: #e91e63;
+    margin-top: 10px;
+}
+
+/* SECCIÓN CONTACTO / FOOTER */
+.contact {
+    background-color: #111111;
+    padding: 50px 0;
+}
+
+
+.footer-selection{
+    display: flex;
+}
+
+.f-enlaces {
+    display: flex;
+    flex-direction: column;
+    margin: o 100px;
+}
+
+.f-enlaces a {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.f-enlaces a:hover {
+    color: #e91e63;
+}
+
+/* DISEÑO RESPONSIVO (MÓVILES Y TABLETS) */
+@media (max-width: 768px) {
+    .title {
+        font-size: 40px;
+    }
+    
+    p {
+        padding: 0 20px;
+    }
+    
+    .navbar, .f-enlaces {
+        display: none; /* Oculta elementos secundarios en móviles para simplificar */
+    }
+    
+    .footer {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
